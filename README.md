@@ -1,5 +1,12 @@
 # ESP32 Camera Driver
 
+## Fork Additions
+
+- Small custom changes adapted for [Code Map Localization]https://github.com/wzli/CodeMapLocalization.
+- Changed 96x96 framesize to 128x96 for 4:3 unscaled output.
+- Allow OV2640 sensor to output low resolution YUV422 format at 50Hz.
+- Fixed build warnings when on ESP-IDF 4.0.
+
 ## General Information
 
 This repository hosts ESP32 compatible driver for OV2640 and OV3660 image sensors. Additionally it provides a few tools, which allow converting the captured frame data to the more common BMP and JPEG formats.

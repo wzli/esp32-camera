@@ -361,6 +361,7 @@ static const uint8_t ov2640_settings_yuv422[][2] = {
     {IMAGE_MODE, IMAGE_MODE_YUV422},
     {0xD7, 0x01},
     {0xE1, 0x67},
+    {R_DVP_SP, 0x04},
     {RESET, 0x00},
     {0, 0},
 };
