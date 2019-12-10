@@ -3,7 +3,7 @@
 ## Fork Additions
 
 - Small custom changes adapted for [Code Map Localization]https://github.com/wzli/CodeMapLocalization.
-- Changed 96x96 framesize to 96x72 for 4:3 unscaled output.
+- Changed smallest framesize from 96x96 to 64x64.
 - Allow OV2640 sensor to output low resolution YUV422 format at 50Hz.
 - Fixed build warnings when on ESP-IDF 4.0.
 
