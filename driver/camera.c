@@ -460,9 +460,7 @@ static void IRAM_ATTR i2s_start_bus()
 
     esp_intr_enable(s_state->i2s_intr_handle);
     I2S0.conf.rx_start = 1;
-    if (s_state->config.pixel_format == PIXFORMAT_JPEG) {
-        vsync_intr_enable();
-    }
+    vsync_intr_enable();
 }
 
 static int i2s_run()
@@ -551,10 +549,6 @@ static void IRAM_ATTR i2s_isr(void* arg)
     I2S0.int_clr.val = I2S0.int_raw.val;
     bool need_yield = false;
     signal_dma_buf_received(&need_yield);
-    if (s_state->config.pixel_format != PIXFORMAT_JPEG
-     && s_state->dma_received_count == s_state->height * s_state->dma_per_line) {
-        i2s_stop(&need_yield);
-    }
     if (need_yield) {
         portYIELD_FROM_ISR();
     }

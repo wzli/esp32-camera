@@ -4,8 +4,10 @@
 
 - Small custom changes adapted for [Code Map Localization]https://github.com/wzli/CodeMapLocalization.
 - Changed smallest framesize from 96x96 to 64x64.
+- Enabled VSYNC interupt for non-JPEG formats.
 - Allow OV2640 sensor to output low resolution YUV422 format at 50Hz.
 - Fixed build warnings when on ESP-IDF 4.0.
+- Added -Ofast compiler optimization flag for performance.
 
 ## General Information
 
